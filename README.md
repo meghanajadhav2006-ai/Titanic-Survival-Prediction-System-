@@ -1,4 +1,6 @@
-# Titanic Survival Prediction System
+## 📊 Confusion Matrix
+
+![Confusion Matrix](confusion_matrix.png)# Titanic Survival Prediction System
 
 ## 📌 Overview
 This project is a machine learning model that predicts whether a passenger survived the Titanic disaster based on various features such as age, gender, class, and fare.
