@@ -1,11 +1,20 @@
+import kagglehub
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+import os
 
-# Load dataset
-data = pd.read_csv('train.csv')
+# Download dataset
+path = kagglehub.dataset_download("yasserh/titanic-dataset")
+
+# Find the CSV file
+files = os.listdir(path)
+print("Files in dataset:", files)
+
+# Load dataset (adjust filename if needed)
+data = pd.read_csv(os.path.join(path, "Titanic-Dataset.csv"))
 
 # Select useful columns
 data = data[['Survived', 'Pclass', 'Sex', 'Age', 'Fare']]
@@ -13,7 +22,7 @@ data = data[['Survived', 'Pclass', 'Sex', 'Age', 'Fare']]
 # Handle missing values
 data['Age'].fillna(data['Age'].mean(), inplace=True)
 
-# Convert categorical data
+# Encode categorical data
 le = LabelEncoder()
 data['Sex'] = le.fit_transform(data['Sex'])
 
