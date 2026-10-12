@@ -81,9 +81,6 @@ The visualization compares survival rates across first, second, and third class 
 
 <img width="713" height="467" alt="FA1-DS" src="https://github.com/user-attachments/assets/b2467c18-2246-4236-be70-61850a99b5e1" />
 
-Gender	Total Passengers	Survived	Survival Rate (%)
-Male	577	109	~19%
-~74%	~74%	~74%	~74%
 
 The chart compares survival rates between male and female passengers. The displayed results indicate a substantially higher survival rate among female passengers.
 
